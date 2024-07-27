@@ -15,7 +15,9 @@ import {
 
 import CustomInput from './CustomInput'
 import { authFormSchema } from '@/lib/utils'
-import { Loader2 } from 'lucide-react'
+import { Loader2, Router } from 'lucide-react'
+import { signIn, signUp } from '@/lib/actions/user.actions'
+import router from 'next/router'
 
 const formSchema = z.object({
   username: z.string().email(),
@@ -41,13 +43,18 @@ const AuthForm = ({ type }: { type: string }) => {
     setLoading(true);
     try {
       if (type == 'sign-up') {
-        // Do Sign UP
+        const newUser = await signUp(data);
 
+        setUser(newUser);
       }
 
       if (type == 'sign-in') {
-        // Do Sign In
+        const response = await signIn({
+          email: data.email,
+          password: data.password,
+        })
 
+        if (response) router.push('/')
       }
     } catch (error) {
 
