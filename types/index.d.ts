@@ -220,6 +220,10 @@ declare interface RightSidebarProps {
   banks: Bank[] & Account[];
 }
 
+declare interface AddBankButtonProps {
+  user: User;
+}
+
 declare interface SiderbarProps {
   user: User;
 }

@@ -58,7 +58,6 @@ const PaymentTransferForm = ({ accounts }: PaymentTransferFormProps) => {
         accountId: receiverAccountId,
       });
 
-      console.log('SenderBank', data);
       const senderBank = await getBank({ documentId: data.senderBank });
 
       const transferParams = {

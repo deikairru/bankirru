@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter, IBM_Plex_Serif } from "next/font/google";
 import "./global.css";
 
+export const dynamic = 'force-dynamic'
+
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 const IbmPlexSerif = IBM_Plex_Serif({
   subsets: ["latin"],
