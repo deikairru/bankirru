@@ -8,10 +8,10 @@ import RecentTransactions from "@/components/RecentTransactions";
 
 const Home = async ({ searchParams: { id, page } }: SearchParamProps) => {
   const currentPage = Number(page as string) || 1;
-  const LoggedIn = await getLoggedInUser();
-  const accounts = await getAccounts({
-    userId: LoggedIn.userId,
-  })
+  const loggedIn = await getLoggedInUser();
+
+  console.log(loggedIn);
+  const accounts = await getAccounts({ userId: loggedIn.$id })
 
   if (!accounts) return;
 
@@ -27,7 +27,7 @@ const Home = async ({ searchParams: { id, page } }: SearchParamProps) => {
           <HeaderBox
             type='greeting'
             title='Welcome'
-            user={LoggedIn?.firstName || 'Guest'}
+            user={loggedIn?.firstName || 'Guest'}
             subtext='Access and manage your account and transactions efficiently'
           />
 
@@ -46,7 +46,7 @@ const Home = async ({ searchParams: { id, page } }: SearchParamProps) => {
         />
       </div>
       <RightSidebar
-        user={LoggedIn}
+        user={loggedIn}
         transactions={account?.transactions}
         banks={accountsData?.slice(0, 2)} />
     </section>
