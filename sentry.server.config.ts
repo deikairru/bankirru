@@ -8,12 +8,12 @@ Sentry.init({
   dsn: "https://e169171ee12da3aa9e85b8707966e3b3@o4507678123163648.ingest.us.sentry.io/4507678124998656",
 
   // Adjust this value in production, or use tracesSampler for greater control
-  tracesSampleRate: 1,
+  tracesSampleRate: 0.1,
 
   // Setting this option to true will print useful information to the console while you're setting up Sentry.
   debug: false,
 
   // Uncomment the line below to enable Spotlight (https://spotlightjs.com)
   // spotlight: process.env.NODE_ENV === 'development',
-  
+
 });

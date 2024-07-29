@@ -10,7 +10,7 @@ const Home = async ({ searchParams: { id, page } }: SearchParamProps) => {
   const currentPage = Number(page as string) || 1;
   const LoggedIn = await getLoggedInUser();
   const accounts = await getAccounts({
-    userId: LoggedIn.$id,
+    userId: LoggedIn.userId,
   })
 
   if (!accounts) return;
