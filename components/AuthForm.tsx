@@ -71,7 +71,7 @@ const AuthForm = ({ type }: { type: string }) => {
         if (!response) router.push('/')
       }
     } catch (error) {
-      console.log(error)
+      console.error("An error occurred when try to log in", error)
     } finally {
       setLoading(false);
     }

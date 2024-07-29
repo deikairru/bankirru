@@ -10,6 +10,7 @@ import {
 import { transactionCategoryStyles } from "@/constant"
 import { cn, formatAmount, formatDateTime, getTransactionStatus, removeSpecialCharacters } from "@/lib/utils"
 
+
 const CategoryBadge = ({ category }: CategoryBadgeProps) => {
   const {
     borderColor,
