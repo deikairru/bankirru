@@ -22,7 +22,7 @@ const MobileNav = ({ user }: MobileNavProps) => {
   const pathName = usePathname();
 
   return (
-    <section className='w-full max-w-[264px]'>
+    <section className='w-full max-w-[400px]'>
       <Sheet>
         <SheetTrigger>
           <Image
@@ -33,7 +33,7 @@ const MobileNav = ({ user }: MobileNavProps) => {
             className='cursor-pointer'
           />
         </SheetTrigger>
-        <SheetContent side='left' className='border-none bg-white'>
+        <SheetContent side='left' className='border-none bg-white w-screen min-[400px]:w-[370px] sm:w-[400px]'>
           <Link href='/' className='cursor-pointer flex items-center gap-1 px-4'>
             <Image
               src='/icons/logo.svg'
@@ -46,7 +46,7 @@ const MobileNav = ({ user }: MobileNavProps) => {
 
           <div className="mobilenav-sheet">
             <SheetClose asChild>
-              <nav className="flex h-full flex-col gap-6 pt-16 text-white">
+              <nav className="flex h-screen flex-col gap-4 pt-16 text-white">
                 {
                   sidebarLinks.map((item) => {
                     const isActive = pathName === item.route || pathName.startsWith(`${item.route}/`);

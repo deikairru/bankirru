@@ -43,7 +43,7 @@ const RightSidebarSkeleton = () => {
         </div>
 
         <div className="flex items-center justify-center gap-5">
-          <div className="container w-full h-40 rounded-lg bg-slate-200 animate-pulse"></div>
+          <div className="container w-full h-40 rounded-lg bg-bank-gradient animate-pulse"></div>
         </div>
 
 
@@ -61,8 +61,8 @@ const RightSidebarSkeleton = () => {
                 </div>
                 <Progress
                   value={60}
-                  className='bg-slate-200 h-2 '
-                  indicatorClassName='bg-slate-300'
+                  className='bg-slate-300 h-2 '
+                  indicatorClassName='bg-blue-300'
                 />
               </div>
             </div>

@@ -16,25 +16,9 @@ const MyBanksSkeleton = () => {
           <h2 className="header-2">
             Loading Your cards ...
           </h2>
-          <div className="max-w-[740px]">
-            <div className="flex flex-col lg:flex-row lg:flex-wrap gap-6 ">
-              <div className="flex flex-col">
-                <div className="w-[320px] h-[190px] rounded-2xl bg-bank-gradient animate-pulse"></div>
-                <Copy title='Copy your shareable bank id' />
-              </div>
-              <div className="flex flex-col">
-                <div className="w-[320px] h-[190px] rounded-2xl bg-bank-gradient animate-pulse"></div>
-                <Copy title='Copy your shareable bank id' />
-              </div>
-              <div className="flex flex-col">
-                <div className="w-[320px] h-[190px] rounded-2xl bg-bank-gradient animate-pulse"></div>
-                <Copy title='Copy your shareable bank id' />
-              </div>
-              <div className="flex flex-col">
-                <div className="w-[320px] h-[190px] rounded-2xl bg-bank-gradient animate-pulse"></div>
-                <Copy title='Copy your shareable bank id' />
-              </div>
-            </div>
+          <div className="flex flex-col">
+            <div className="max-w-[320px] h-[190px] rounded-2xl bg-bank-gradient animate-pulse"></div>
+            <Copy title='Copy your shareable bank id' />
           </div>
         </div>
       </div>

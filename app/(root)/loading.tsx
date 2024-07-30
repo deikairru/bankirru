@@ -13,7 +13,7 @@ const homeSkeleton = () => {
             type='greeting'
             title='Loading'
             user={'Data ...'}
-            subtext='Access and manage your account and transactions efficiently'
+            subtext='Please wait for a moment'
           />
 
           <TotalBalanceBoxSkeleton />

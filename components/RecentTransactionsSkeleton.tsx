@@ -9,7 +9,7 @@ import {
   TableRow,
 } from "@/components/ui/table"
 
-const RecentTransactionsSkeleton = ({ history = false }: { history: boolean }) => {
+const RecentTransactionsSkeleton = ({ history = false }: { history?: boolean }) => {
   return (
     <section className="recent-transactions">
       {
@@ -26,8 +26,8 @@ const RecentTransactionsSkeleton = ({ history = false }: { history: boolean }) =
           {
             !history ?
               <div className="flex flex-row justify-center items-center w-full gap-4 mt-4">
-                <div className="h-3 bg-gray-200 rounded-full dark:bg-gray-700 w-48"></div>
-                <div className="h-3 bg-gray-200 rounded-full dark:bg-gray-700 w-48"></div>
+                <div className="h-3 bg-gray-300 rounded-full dark:bg-gray-700 w-48"></div>
+                <div className="h-3 bg-gray-300 rounded-full dark:bg-gray-700 w-48"></div>
               </div>
               : <></>
           }
@@ -44,31 +44,31 @@ const RecentTransactionsSkeleton = ({ history = false }: { history: boolean }) =
               </TableRow>
             </TableHeader>
             <TableBody>
-              {Array.from({ length: 10 }, (v, k) => {
+              {Array.from({ length: 4 }, (v, k) => {
                 return (
                   <TableRow key={k} className='bg-[#F6FEF9] over:bg-none border-b-DEFAULT'>
                     <TableCell className="max-w-[250px] pl-2 pr-10">
-                      <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-full"></div>
+                      <div className="h-2 bg-gray-300 rounded-full dark:bg-gray-700 max-w-full"></div>
                     </TableCell>
 
                     <TableCell className='pl-2 pr-10 font-semibold'>
-                      <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-full"></div>
+                      <div className="h-2 bg-gray-300 rounded-full dark:bg-gray-700 max-w-full"></div>
                     </TableCell>
 
                     <TableCell className="pl-2 pr-10">
-                      <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-full"></div>
+                      <div className="h-2 bg-gray-300 rounded-full dark:bg-gray-700 max-w-full"></div>
                     </TableCell>
 
                     <TableCell className="min-w-32 pl-2 pr-10">
-                      <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-full"></div>
+                      <div className="h-2 bg-gray-300 rounded-full dark:bg-gray-700 max-w-full"></div>
                     </TableCell>
 
                     <TableCell className="pl-2 pr-10 capitalize min-w-24 max-md:hidden">
-                      <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-full"></div>
+                      <div className="h-2 bg-gray-300 rounded-full dark:bg-gray-700 max-w-full"></div>
                     </TableCell>
 
                     <TableCell className="pl-2 pr-10 max-md:hidden">
-                      <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-full"></div>
+                      <div className="h-2 bg-gray-300 rounded-full dark:bg-gray-700 max-w-full"></div>
                     </TableCell>
                   </TableRow>
                 )
