@@ -9,21 +9,28 @@ import {
   TableRow,
 } from "@/components/ui/table"
 
-const RecentTransactionsSkeleton = () => {
+const RecentTransactionsSkeleton = ({ history = false }: { history: boolean }) => {
   return (
     <section className="recent-transactions">
-      <header className="flex items-center justify-between">
-        <h2 className="recent-transactions-label">Loading Recent transactions ...</h2>
-        <div className="view-all-btn">
-          View all
-        </div>
-      </header>
+      {
+        !history ?
+          <header className="flex items-center justify-between">
+            <h2 className="recent-transactions-label">Loading Recent transactions ...</h2>
+            <div className="view-all-btn">
+              View all
+            </div>
+          </header> : <></>
+      }
       <section className="tabs">
         <div className="flex flex-col gap-8 max-w-[95%] mx-auto animate-pulse">
-          <div className="flex flex-row justify-center items-center w-full gap-4 mt-4">
-            <div className="h-3 bg-gray-200 rounded-full dark:bg-gray-700 w-48"></div>
-            <div className="h-3 bg-gray-200 rounded-full dark:bg-gray-700 w-48"></div>
-          </div>
+          {
+            !history ?
+              <div className="flex flex-row justify-center items-center w-full gap-4 mt-4">
+                <div className="h-3 bg-gray-200 rounded-full dark:bg-gray-700 w-48"></div>
+                <div className="h-3 bg-gray-200 rounded-full dark:bg-gray-700 w-48"></div>
+              </div>
+              : <></>
+          }
 
           <Table>
             <TableHeader className="bg-[#f9fafb]">
@@ -56,7 +63,7 @@ const RecentTransactionsSkeleton = () => {
                       <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-full"></div>
                     </TableCell>
 
-                    <TableCell className="pl-2 pr-10 capitalize min-w-24">
+                    <TableCell className="pl-2 pr-10 capitalize min-w-24 max-md:hidden">
                       <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-full"></div>
                     </TableCell>
 
@@ -67,7 +74,6 @@ const RecentTransactionsSkeleton = () => {
                 )
               })}
             </TableBody>
-
           </Table>
         </div>
       </section>
