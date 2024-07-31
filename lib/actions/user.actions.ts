@@ -18,7 +18,7 @@ const {
 
 export const getUserInfo = async ({ userId }: getUserInfoProps) => {
   try {
-    const { database } = await createAdminClient();
+    const { database } = createAdminClient();
 
     const user = await database.listDocuments(
       DATABASE_ID!,
@@ -34,7 +34,7 @@ export const getUserInfo = async ({ userId }: getUserInfoProps) => {
 
 export const signIn = async ({ email, password }: signInProps) => {
   try {
-    const { account } = await createAdminClient();
+    const { account } = createAdminClient();
     const session = await account.createEmailPasswordSession(email, password);
 
     cookies().set("appwrite-session", session.secret, {
@@ -58,9 +58,9 @@ export const signUp = async ({ password, ...userData }: SignUpParams) => {
   let newUserAccount;
 
   try {
-    const { account, database } = await createAdminClient();
+    const { account, database } = createAdminClient();
 
-    newUserAccount = await account.create(
+    newUserAccount = account.create(
       ID.unique(),
       email,
       password,
@@ -84,7 +84,7 @@ export const signUp = async ({ password, ...userData }: SignUpParams) => {
       ID.unique(),
       {
         ...userData,
-        userId: newUserAccount.$id,
+        userId: (await newUserAccount).$id,
         dwollaCustomerId,
         dwollaCustomerUrl
       }
@@ -107,7 +107,7 @@ export const signUp = async ({ password, ...userData }: SignUpParams) => {
 
 export async function getLoggedInUser() {
   try {
-    const { account } = await createSessionClient();
+    const { account } = createSessionClient();
     const result = await account.get();
 
     const user = await getUserInfo({ userId: result.$id })
@@ -121,7 +121,7 @@ export async function getLoggedInUser() {
 
 export const logoutAccount = async () => {
   try {
-    const { account } = await createSessionClient();
+    const { account } = createSessionClient();
 
     cookies().delete('appwrite-session');
 
@@ -160,7 +160,7 @@ export const createBankAccount = async ({
   shareableId,
 }: createBankAccountProps) => {
   try {
-    const { database } = await createAdminClient();
+    const { database } = createAdminClient();
 
     const bankAccount = await database.createDocument(
       DATABASE_ID!,
@@ -246,7 +246,7 @@ export const exchangePublicToken = async ({
 
 export const getBanks = async ({ userId }: getBanksProps) => {
   try {
-    const { database } = await createAdminClient();
+    const { database } = createAdminClient();
 
     const banks = await database.listDocuments(
       DATABASE_ID!,
@@ -262,7 +262,7 @@ export const getBanks = async ({ userId }: getBanksProps) => {
 
 export const getBank = async ({ documentId }: getBankProps) => {
   try {
-    const { database } = await createAdminClient();
+    const { database } = createAdminClient();
 
     const bank = await database.listDocuments(
       DATABASE_ID!,
@@ -278,7 +278,7 @@ export const getBank = async ({ documentId }: getBankProps) => {
 
 export const getBankByAccountId = async ({ accountId }: getBankByAccountIdProps) => {
   try {
-    const { database } = await createAdminClient();
+    const { database } = createAdminClient();
 
     const bank = await database.listDocuments(
       DATABASE_ID!,
