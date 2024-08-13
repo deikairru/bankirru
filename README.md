@@ -46,14 +46,17 @@ If you're cloned this project and need assistance or face any bugs, please conta
 
 ## <a name="preview">🖼️ Preview Page</a>
 
+### Homepage
 <a href="https://bankirru.vercel.app/" target="_blank">
   <img src="https://i.imgur.com/UqB4Vbh.png" alt="preview-home" />
 </a>
 
+### Sign In
 <a href="https://bankirru.vercel.app/sign-in" target="_blank">
   <img src="https://i.imgur.com/6QVWgkE.png" alt="preview-signin" />
 </a>
 
+### Sign Up
 <a href="https://bankirru.vercel.app/sign-up" target="_blank">
   <img src="https://i.imgur.com/uXqRx3z.png" alt="preview-signin" />
 </a>
@@ -108,7 +111,7 @@ Make sure you have the following installed on your machine:
 
 ```bash
 git clone git@github.com:deikairru/bankirru.git
-cd banking
+cd bankirru
 ```
 
 **Installation**
