@@ -23,7 +23,7 @@ const Sidebar = ({ user }: SiderbarProps) => {
             alt='Next Bank Logo'
             className='size-[24px] max-xl:size-14'
           />
-          <h1 className="sidebar-logo">Next Bank</h1>
+          <h1 className="sidebar-logo">Bankirru</h1>
         </Link>
 
         {

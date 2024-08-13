@@ -13,12 +13,11 @@ const IbmPlexSerif = IBM_Plex_Serif({
 })
 
 export const metadata: Metadata = {
-  title: "Next Bank",
+  title: "Bankirru",
   description: "The Next modern banking platform for everyone",
   icons: {
     icon: '/icons/logo.svg'
   }
-
 };
 
 export default function RootLayout({

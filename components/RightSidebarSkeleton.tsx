@@ -77,8 +77,8 @@ const RightSidebarSkeleton = () => {
                 </div>
                 <Progress
                   value={60}
-                  className='bg-slate-200 h-2 '
-                  indicatorClassName='bg-slate-300'
+                  className='bg-slate-300 h-2 '
+                  indicatorClassName='bg-blue-300'
                 />
               </div>
             </div>
