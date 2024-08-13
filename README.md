@@ -13,7 +13,7 @@
     <img src="https://img.shields.io/badge/-Sentry-white?style=for-the-badge&logo=Sentry&logoColor=white&color=%237A4889" alt="sentry" />
     <img src="https://img.shields.io/badge/-Zod-white?style=for-the-badge&logo=Zod&logoColor=white&color=%23274D82" alt="zod" />
     <img src="https://img.shields.io/badge/Chart.js-FE777B?style=for-the-badge&logo=Chart.js&logoColor=white" alt="chartjs" />
-    <img src="https://img.shields.io/static/v1?style=for-the-badge&message=shadcn%2Fui&color=000000&logo=shadcn%2Fui&logoColor=FFFFFF" alt="shadcn" />
+    <img src="https://img.shields.io/static/v1?style=for-the-badge&message=shadcn%2Fui&color=000000&logo=shadcn%2Fui&logoColor=FFFFFF&label=" alt="shadcn" />
     <img src="https://img.shields.io/badge/react--hook--form-EC5990?style=for-the-badge&logo=reacthookform&logoColor=white" alt="reacthookform" />
     
   </div>
@@ -152,29 +152,29 @@ Replace the placeholder values with your actual respective account credentials. 
 
 **For the purpose of testing you can use this Demo Account**
 
-- Login Account (Free Demo)
-**Username**
+### Login Account (Free Demo)
+- **Username**
 ```
 demo@bank.next  
 ```
-**Username**
+- **Password**
 ```
 demo1234  
 ```
 
-- Bank Account (use whenever you want to add new bank account/card)
-**Username**
+### Bank Account (use whenever you want to add new bank account/card)
+- **Username**
 ```
 user_good 
 ```
-**Username**
+- **Password**
 ```
 pass_good 
 ```
 
-- Creating New Account
+### Creating New Account
 **When creating new account, make sure the city name are valid.**
-example: New York
+- example: New York
 ```
 NY
 ```
