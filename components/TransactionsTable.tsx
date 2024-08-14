@@ -1,15 +1,13 @@
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
   TableHead,
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
-import { transactionCategoryStyles } from "@/constant"
+import { transactionCategoryStyles } from "@/constants"
 import { cn, formatAmount, formatDateTime, getTransactionStatus, removeSpecialCharacters } from "@/lib/utils"
-
 
 const CategoryBadge = ({ category }: CategoryBadgeProps) => {
   const {
@@ -50,7 +48,7 @@ const TransactionsTable = ({ transactions }: TransactionTableProps) => {
 
           return (
             <TableRow key={t.id} className={`${isDebit || amount[0] === '-' ? 'bg-[#FFFBFA]' : 'bg-[#F6FEF9]'} !over:bg-none !border-b-DEFAULT`}>
-              <TableCell className="max-w-[250px] pl-2 pr-10">
+              <TableCell title={removeSpecialCharacters(t.name)} className="max-w-[150px] pl-2 pr-10">
                 <div className="flex items-center gap-3">
                   <h1 className="text-14 truncate font-semibold text-[#344054]">
                     {removeSpecialCharacters(t.name)}
@@ -73,7 +71,7 @@ const TransactionsTable = ({ transactions }: TransactionTableProps) => {
                 {formatDateTime(new Date(t.date)).dateTime}
               </TableCell>
 
-              <TableCell className="pl-2 pr-10 capitalize min-w-24 max-md:hidden">
+              <TableCell className="pl-2 pr-10 capitalize min-w-24">
                 {t.paymentChannel}
               </TableCell>
 
